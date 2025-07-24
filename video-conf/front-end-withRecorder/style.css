@@ -1,0 +1,34 @@
+body{
+  font-family: Georgia;
+}
+
+.container{
+  height: 100vh
+}
+
+.remote-speaker{
+  width: 18%; 
+  height: 80px;
+}
+
+#local-video-left,#local-video-right{
+  bottom: 20px; width: 150px; height: 100px;
+}
+
+#local-video-left{
+  left: 20px;
+}
+
+#local-video-right{
+  right: 20px;
+}
+
+#message{
+  position: absolute;
+  top: 50%;
+  left: 45%;
+}
+
+#room-info, #control-buttons{
+  margin: 15px 0;
+}

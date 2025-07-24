@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Vite App</title>
+	</head>
+	<body>
+		<div class="container">
+	  		<div id="room-info">
+				Room: <input id="room-input" placeholder="Room Name" type="text" />
+				User:<input id="username" value="user" type="text" />
+				<button id="join-room">Join</button>
+			</div>
+
+			<!-- Buttons that setup the call/control feed -->
+	  		<div id="control-buttons" class="d-none">
+		  		<button id="enable-feed" class="btn btn-primary"> Feed On</button>
+		  		<button id="send-feed" class="btn btn-success" disabled> Send Feed</button>
+		  		<button id="mute" class="btn btn-success" disabled> Audio On</button>
+		  		<button id="hang-up" class="btn btn-danger" disabled> Hangup</button>
+			</div>
+
+			<!-- Small videos at top (non dominant speaker) -->
+			<div id="remote-media" class="mt-2 d-flex justify-content-between mb-3" style="gap: 5px;">
+				<div class="remote-video-container border border-primary remote-speaker">
+					<video id="remote-video-1" class="w-100 h-100 remote-video" autoplay inline controls></video>
+					<div id="username-1" class="username"></div>
+				</div>
+				<div class="remote-video-container border border-primary" style="width: 18%; height: 80px;">
+					<video id="remote-video-2" class="w-100 h-100 remote-video" autoplay inline controls></video>
+					<div id="username-2" class="username"></div>
+				</div>
+				<div class="remote-video-container border border-primary" style="width: 18%; height: 80px;">
+					<video id="remote-video-3" class="w-100 h-100 remote-video" autoplay inline controls></video>
+					<div id="username-3" class="username"></div>
+				</div>
+				<div class="remote-video-container border border-primary" style="width: 18%; height: 80px;">
+					<video id="remote-video-4" class="w-100 h-100 remote-video" autoplay inline controls></video>
+					<div id="username-4" class="username"></div>
+				</div>
+			</div>
+	
+			<!-- Current Speaker Video (Large Center Video) -->
+			<div id="current-speaker" class="mb-3" style="text-align: center;">
+				<div class="current-video-container" style="width: 80%; height: 400px; margin: 0 auto;">
+					<video id="remote-video-0" class="w-100 h-100 border border-primary remote-video" autoplay inline controls></video>
+					<div id="username-0" class="username"></div>
+				</div>
+			</div>
+		
+			<!-- Local Media Section (bottom left corner) -->
+			<div id="local-media" class="position-relative" style="height: 150px;">
+				<!-- Local Video on the Left -->
+				<div class="position-absolute">
+					<video id="local-video-left" class="border border-primary" muted autoplay inline></video>
+				</div>
+			</div>
+		</div>
+		<script type="module" src="/main.js"></script>
+  </body>
+</html>
